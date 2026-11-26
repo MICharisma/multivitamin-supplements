@@ -21,7 +21,7 @@ interrupt. launchd makes sure something resumes it.
 | RubyLLM | [Durable agents · 05 · Bergen Fløyen closure](https://github.com/MICharisma/rubyllm-multivitamin/tree/main/features/30-durable-agents-and-rails/05-bergen-floyen-closure) | A denial recorded in the web process is honored by the resumed worker without running the tool. |
 | RubyLLM | [Durable agents · 07 · Luang Prabang boat receipt](https://github.com/MICharisma/rubyllm-multivitamin/tree/main/features/30-durable-agents-and-rails/07-luang-prabang-boat-receipt) | At-least-once tool execution needs a durable business key. |
 | RubyLLM | [Durable agents · 12 · Rapa Nui quarry stop](https://github.com/MICharisma/rubyllm-multivitamin/tree/main/features/30-durable-agents-and-rails/12-rapa-nui-quarry-stop) | `cancelled` is a persisted request the next worker checkpoint consumes. No HTTP needed. |
-| Terminal | [terminal-multivitamin](https://github.com/MICharisma/terminal-multivitamin) (planned: processes, macOS tools) | `launchctl bootstrap`, `kickstart`, `print`; `tail -f` on the worker log. |
+| Terminal | [terminal-multivitamin](https://github.com/MICharisma/terminal-multivitamin) (planned features 10 Processes and jobs and 18 macOS system tools; not built yet) | `launchctl bootstrap`, `kickstart`, `print`; `tail -f` on the worker log. |
 
 ## Architecture
 

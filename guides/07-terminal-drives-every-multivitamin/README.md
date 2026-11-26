@@ -10,12 +10,16 @@ realistic things you point it at. Use it before a release, when a
 contributor's machine is new, or to see why one repo's CI is red.
 
 > **Terminal multivitamin status.** [MICharisma/terminal-multivitamin](https://github.com/MICharisma/terminal-multivitamin)
-> is brand new. Its first version is being built on a branch as this is
-> written. Its planned features include navigation, pipes and redirection,
-> grep/find/sed/awk, processes and jobs, curl, Homebrew, zsh configuration,
-> and macOS tools (`open`, `pbcopy`, `defaults`, `launchctl`). This guide
-> links to the repo root. Each section names the planned feature it leans on,
-> so the links can be tightened once those folders exist.
+> is brand new. Its first version is open as
+> [PR #1](https://github.com/MICharisma/terminal-multivitamin/pull/1)
+> (branch `cursor/terminal-multivitamin-v1-43fa`, not merged), with two of 18
+> features built: [01 Navigation and files](https://github.com/MICharisma/terminal-multivitamin/tree/cursor/terminal-multivitamin-v1-43fa/features/01-navigation-and-files) and
+> [02 Globbing and expansion](https://github.com/MICharisma/terminal-multivitamin/tree/cursor/terminal-multivitamin-v1-43fa/features/02-globbing-and-expansion). The features
+> this guide leans on hardest are still planned: 03 Pipes and redirection,
+> 04 Quoting and parameter expansion, 05 grep, 10 Processes and jobs,
+> 13 HTTP with curl, 16 zsh configuration, and 17 macOS desktop bridges. Each
+> section below names its feature by number, so the links can be tightened
+> once those folders exist.
 
 ## Source scenarios and commands
 
@@ -63,7 +67,7 @@ one-line summary on the clipboard for the release note. Then she wants to
 poke the Phoenix METAR desk's JSON route and open the Stimulus catalog in
 Safari.
 
-### zsh: the loop (planned features: zsh config, processes, pipes)
+### zsh: the loop (Terminal 16 zsh configuration, 04 parameter expansion, 03 pipes)
 
 ```zsh
 # ~/.zshrc
@@ -90,7 +94,7 @@ mv-check() {
 }
 ```
 
-### curl and jq: hit a real route (planned feature: curl)
+### curl and jq: hit a real route (Terminal 13 HTTP with curl, 10 processes and jobs)
 
 ```sh
 cd ~/code/phoenix-multivitamin && mix phx.server &      # job control: %1
@@ -103,7 +107,7 @@ kill %1
 The route and the `@metar` map come from
 [Controllers and JSON · 01 · Queenstown METAR desk](https://github.com/MICharisma/phoenix-multivitamin/tree/main/features/03-controllers-and-json/01-queenstown-metar-desk).
 
-### macOS tools: open and pbcopy (planned feature: macOS tools)
+### macOS tools: open and pbcopy (Terminal 17 macOS desktop bridges)
 
 ```sh
 cd ~/code/stimulus-multivitamin && npx serve . &
@@ -111,7 +115,7 @@ open -a Safari "http://localhost:3000/features/11-css-classes/09-turn-point-fogh
 git -C ~/code/rubyllm-multivitamin log -1 --format='%h %s' | pbcopy
 ```
 
-### Find and grep across repos (planned feature: grep/find)
+### Find and grep across repos (Terminal 05 grep, 08 sed)
 
 Which scenarios across the family mention Kiruna?
 
@@ -124,9 +128,11 @@ grep -rl --include='*.md' -i 'kiruna' ~/code/*-multivitamin/features | sed -E 's
 - **`eval` and quoting.** The Stimulus entry holds a whole loop in a
   string. That's fine in your own `.zshrc`; don't build those strings from
   anything you didn't write.
-- **zsh is not bash.** `${(ko)mv_checks}` (sorted keys), `${log:h}` (dirname),
-  and `${(j:, :)failed}` (join) are zsh-only. The Terminal multivitamin's
-  zsh feature is where those flags get explained.
+- **zsh is not bash.** `${(ko)mv_checks}` (sorted keys), `${log:h}` (the
+  `:h` path modifier), and `${(j:, :)failed}` (join) are zsh-only. Path
+  modifiers are built in Terminal 02,
+  [09 Yogyakarta batik scans](https://github.com/MICharisma/terminal-multivitamin/tree/cursor/terminal-multivitamin-v1-43fa/features/02-globbing-and-expansion/09-yogyakarta-batik-scans).
+  Parameter flags arrive with Terminal 04.
 - **`npx serve` port.** `serve` defaults to 3000 but picks another if 3000
   is busy, and prints the one it chose. Read it before `open`.
 - **Cassettes vs live keys.** `bundle exec rake test` plays cassettes by

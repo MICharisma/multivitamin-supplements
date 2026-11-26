@@ -352,6 +352,18 @@
           "path": ""
         },
         {
+          "multivitamin": "terminal",
+          "repo": "MICharisma/terminal-multivitamin",
+          "ref": "cursor/terminal-multivitamin-v1-43fa",
+          "path": "features/01-navigation-and-files"
+        },
+        {
+          "multivitamin": "terminal",
+          "repo": "MICharisma/terminal-multivitamin",
+          "ref": "cursor/terminal-multivitamin-v1-43fa",
+          "path": "features/02-globbing-and-expansion"
+        },
+        {
           "multivitamin": "rubyllm",
           "repo": "MICharisma/rubyllm-multivitamin",
           "ref": "main",
@@ -392,6 +404,12 @@
           "repo": "MICharisma/phoenix-multivitamin",
           "ref": "main",
           "path": "features/03-controllers-and-json/01-queenstown-metar-desk"
+        },
+        {
+          "multivitamin": "terminal",
+          "repo": "MICharisma/terminal-multivitamin",
+          "ref": "cursor/terminal-multivitamin-v1-43fa",
+          "path": "features/02-globbing-and-expansion/09-yogyakarta-batik-scans"
         }
       ]
     },

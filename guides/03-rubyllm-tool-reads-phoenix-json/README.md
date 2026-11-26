@@ -128,7 +128,7 @@ def call(conn, {:error, :not_found}) do
 end
 ```
 
-### Terminal: check the seam before the model does
+### Terminal: check the seam before the model does (Terminal 13 HTTP with curl, planned)
 
 ```sh
 curl -s localhost:4000/features/03-controllers-and-json/04-ulaanbaatar-winter-notam/notams/ubbn-ice | jq .notam.text

@@ -8,7 +8,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-REFS = r"(?:main|highlighting-trial|gh-pages|cursor/multivitamin-web-v1-b7f7)"
+REFS = r"(?:main|highlighting-trial|gh-pages|cursor/multivitamin-web-v1-b7f7|cursor/terminal-multivitamin-v1-43fa)"
 LINK = re.compile(
     r"\(https://github\.com/MICharisma/([\w-]+)(?:/(?:tree|blob)/(" + REFS + r")(?:/([^)\s#]*))?)?(?:#[^)]*)?\)"
 )
