@@ -1,0 +1,542 @@
+{
+  "version": 1,
+  "name": "supplements",
+  "title": "Multivitamin Supplements",
+  "repo": "MICharisma/multivitamin-supplements",
+  "libraries": {
+    "rubyllm": {
+      "title": "RubyLLM",
+      "repo": "MICharisma/rubyllm-multivitamin"
+    },
+    "phoenix": {
+      "title": "Phoenix",
+      "repo": "MICharisma/phoenix-multivitamin"
+    },
+    "stimulus": {
+      "title": "Stimulus",
+      "repo": "MICharisma/stimulus-multivitamin"
+    },
+    "swiftdata": {
+      "title": "SwiftData",
+      "repo": "MICharisma/swiftdata-multivitamin"
+    },
+    "terminal": {
+      "title": "Terminal",
+      "repo": "MICharisma/terminal-multivitamin"
+    },
+    "multivitamin-web": {
+      "title": "multivitamin-web",
+      "repo": "MICharisma/multivitamin-web"
+    },
+    "multivitamin-build": {
+      "title": "@micharisma/multivitamin-build",
+      "repo": null
+    }
+  },
+  "supplements": [
+    {
+      "folder": "guides/01-stimulus-rubyllm-streaming-transcript",
+      "id": "stimulus-rubyllm-streaming-transcript",
+      "title": "Stimulus + RubyLLM: a streamed answer in a Stimulus transcript",
+      "summary": "Stream RubyLLM chunks into a persisted assistant row and a page whose Stimulus controller follows the transcript.",
+      "combines": [
+        "stimulus",
+        "rubyllm"
+      ],
+      "scenario": "Warsaw tram depot night handover",
+      "sources": [
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/02-streaming/12-rio-bloco-broadcast"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/10-rails-integration/04-kumasi-fontomfrom-stream"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/10-rails-integration/12-antofagasta-furnace-cancel"
+        },
+        {
+          "multivitamin": "stimulus",
+          "repo": "MICharisma/stimulus-multivitamin",
+          "ref": "main",
+          "path": "features/02-lifecycle-callbacks/08-live-support-chat-transcript"
+        },
+        {
+          "multivitamin": "stimulus",
+          "repo": "MICharisma/stimulus-multivitamin",
+          "ref": "main",
+          "path": "features/13-dispatching-events/04-lopez-freight-bell"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/01-chat-basics/13-warsaw-tram-depot-handover"
+        }
+      ]
+    },
+    {
+      "folder": "guides/02-phoenix-asks-a-rubyllm-service",
+      "id": "phoenix-asks-a-rubyllm-service",
+      "title": "Phoenix + RubyLLM: a LiveView that asks a RubyLLM service",
+      "summary": "assign_async in LiveView calls a small Ruby endpoint that answers with with_schema JSON.",
+      "combines": [
+        "phoenix",
+        "rubyllm"
+      ],
+      "scenario": "Puerto Natales crosswind brief",
+      "sources": [
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/08-async-assigns/01-puerto-natales-wind-fetch"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/08-async-assigns/12-walvis-bay-timeout"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/08-async-assigns/13-balmaceda-capstone-desk"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/04-structured-output/01-ubud-subak-board"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/12-tokens-and-cost/01-pokhara-sarangkot-tokens"
+        }
+      ]
+    },
+    {
+      "folder": "guides/03-rubyllm-tool-reads-phoenix-json",
+      "id": "rubyllm-tool-reads-phoenix-json",
+      "title": "RubyLLM + Phoenix: a RubyLLM tool that reads a Phoenix JSON endpoint",
+      "summary": "A RubyLLM::Tool calls existing Phoenix json/2 routes and turns a fallback 404 into a retryable tool error.",
+      "combines": [
+        "rubyllm",
+        "phoenix",
+        "terminal"
+      ],
+      "scenario": "Chinggis Khaan winter morning",
+      "sources": [
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/03-controllers-and-json/04-ulaanbaatar-winter-notam"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/03-controllers-and-json/01-queenstown-metar-desk"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/03-tools/09-hallstatt-salt-face"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/03-tools/07-bogota-emerald-parcel"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/03-tools/08-petra-tomb-hygrometer"
+        }
+      ]
+    },
+    {
+      "folder": "guides/04-swiftdata-client-for-a-rubyllm-api",
+      "id": "swiftdata-client-for-a-rubyllm-api",
+      "title": "SwiftData + RubyLLM: an Apple client for an LLM-backed Rails API",
+      "summary": "A Schematist enum list and a Swift Codable enum describe the same JSON; the app stores the result as SwiftData models.",
+      "combines": [
+        "swiftdata",
+        "rubyllm"
+      ],
+      "scenario": "Sala del Tule pour for Madrid",
+      "sources": [
+        {
+          "multivitamin": "swiftdata",
+          "repo": "MICharisma/swiftdata-multivitamin",
+          "ref": "main",
+          "path": "features/06-codable-and-enums/08-oaxaca-aroma-flight"
+        },
+        {
+          "multivitamin": "swiftdata",
+          "repo": "MICharisma/swiftdata-multivitamin",
+          "ref": "main",
+          "path": "features/06-codable-and-enums/09-oaxaca-label-proof"
+        },
+        {
+          "multivitamin": "swiftdata",
+          "repo": "MICharisma/swiftdata-multivitamin",
+          "ref": "main",
+          "path": "features/06-codable-and-enums/06-minas-heart-cut"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/04-structured-output/09-chengdu-panda-gate"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/04-structured-output/02-thimphu-thangka-drawers"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/10-rails-integration/07-dar-es-salaam-farebox-usage"
+        }
+      ]
+    },
+    {
+      "folder": "guides/05-liveview-and-stimulus-side-by-side",
+      "id": "liveview-and-stimulus-side-by-side",
+      "title": "Phoenix LiveView and Stimulus, side by side",
+      "summary": "The same de-icing holdover board built once in Stimulus and once in LiveView, with a concern-by-concern comparison.",
+      "combines": [
+        "phoenix",
+        "stimulus"
+      ],
+      "scenario": "Kiruna de-icing holdover board",
+      "sources": [
+        {
+          "multivitamin": "stimulus",
+          "repo": "MICharisma/stimulus-multivitamin",
+          "ref": "main",
+          "path": "features/11-css-classes/09-turn-point-foghorn"
+        },
+        {
+          "multivitamin": "stimulus",
+          "repo": "MICharisma/stimulus-multivitamin",
+          "ref": "main",
+          "path": "features/02-lifecycle-callbacks/03-live-scoreboard-poller"
+        },
+        {
+          "multivitamin": "stimulus",
+          "repo": "MICharisma/stimulus-multivitamin",
+          "ref": "main",
+          "path": "features/09-values/03-fog-signal-board"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/12-js-commands/01-qaarsut-frost-toggle"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/13-client-hooks/01-cebu-mactan-clock-hook"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/06-liveview-lifecycle-and-events/01-akureyri-night-watch"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/01-routing-and-plugs/10-kiruna-deice-pad"
+        }
+      ]
+    },
+    {
+      "folder": "guides/06-stimulus-catalog-in-multivitamin-web",
+      "id": "stimulus-catalog-in-multivitamin-web",
+      "title": "Stimulus + multivitamin-web: authoring a catalog the client can render",
+      "summary": "multivitamin.json, lesson.json, region markers, and a registry entry for a multi-file JavaScript catalog.",
+      "combines": [
+        "stimulus",
+        "multivitamin-web",
+        "multivitamin-build"
+      ],
+      "scenario": "Fog signal board in the client",
+      "sources": [
+        {
+          "multivitamin": "stimulus",
+          "repo": "MICharisma/stimulus-multivitamin",
+          "ref": "main",
+          "path": "features/09-values/03-fog-signal-board"
+        },
+        {
+          "multivitamin": "stimulus",
+          "repo": "MICharisma/stimulus-multivitamin",
+          "ref": "main",
+          "path": "features/13-dispatching-events/04-lopez-freight-bell"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "highlighting-trial",
+          "path": "multivitamin.json"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "highlighting-trial",
+          "path": "features/01-chat-basics/feature.json"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "highlighting-trial",
+          "path": "features/01-routing-and-plugs/01-lukla-shear-gate/lesson.json"
+        },
+        {
+          "multivitamin": "multivitamin-web",
+          "repo": "MICharisma/multivitamin-web",
+          "ref": "cursor/multivitamin-web-v1-b7f7",
+          "path": "src/registry.ts"
+        },
+        {
+          "multivitamin": "multivitamin-web",
+          "repo": "MICharisma/multivitamin-web",
+          "ref": "cursor/multivitamin-web-v1-b7f7",
+          "path": "src/data/types.ts"
+        }
+      ]
+    },
+    {
+      "folder": "guides/07-terminal-drives-every-multivitamin",
+      "id": "terminal-drives-every-multivitamin",
+      "title": "Terminal + every multivitamin: one shell session across the family",
+      "summary": "A zsh loop runs every repo's checks, logs them, and copies a summary; curl, jq, open, and grep against real routes and folders.",
+      "combines": [
+        "terminal",
+        "rubyllm",
+        "phoenix",
+        "stimulus",
+        "swiftdata",
+        "multivitamin-web"
+      ],
+      "scenario": "Inês checks the family before a Saturday release in Porto",
+      "sources": [
+        {
+          "multivitamin": "terminal",
+          "repo": "MICharisma/terminal-multivitamin",
+          "ref": "main",
+          "path": ""
+        },
+        {
+          "multivitamin": "terminal",
+          "repo": "MICharisma/terminal-multivitamin",
+          "ref": "cursor/terminal-multivitamin-v1-43fa",
+          "path": "features/01-navigation-and-files"
+        },
+        {
+          "multivitamin": "terminal",
+          "repo": "MICharisma/terminal-multivitamin",
+          "ref": "cursor/terminal-multivitamin-v1-43fa",
+          "path": "features/02-globbing-and-expansion"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": ".github/workflows/test.yml"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": ".github/workflows/test.yml"
+        },
+        {
+          "multivitamin": "stimulus",
+          "repo": "MICharisma/stimulus-multivitamin",
+          "ref": "main",
+          "path": ".github/workflows/test.yml"
+        },
+        {
+          "multivitamin": "stimulus",
+          "repo": "MICharisma/stimulus-multivitamin",
+          "ref": "main",
+          "path": ""
+        },
+        {
+          "multivitamin": "swiftdata",
+          "repo": "MICharisma/swiftdata-multivitamin",
+          "ref": "main",
+          "path": ".github/workflows/test.yml"
+        },
+        {
+          "multivitamin": "multivitamin-web",
+          "repo": "MICharisma/multivitamin-web",
+          "ref": "cursor/multivitamin-web-v1-b7f7",
+          "path": "package.json"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/03-controllers-and-json/01-queenstown-metar-desk"
+        },
+        {
+          "multivitamin": "terminal",
+          "repo": "MICharisma/terminal-multivitamin",
+          "ref": "cursor/terminal-multivitamin-v1-43fa",
+          "path": "features/02-globbing-and-expansion/09-yogyakarta-batik-scans"
+        }
+      ]
+    },
+    {
+      "folder": "guides/08-publishing-catalogs-from-the-terminal",
+      "id": "publishing-catalogs-from-the-terminal",
+      "title": "The build package + Terminal: publishing a catalog from the shell",
+      "summary": "Build artifacts into a gh-pages worktree, push, and verify them with curl and jq the way multivitamin-web reads them.",
+      "combines": [
+        "multivitamin-build",
+        "terminal",
+        "multivitamin-web",
+        "phoenix"
+      ],
+      "scenario": "Publishing Phoenix's routing-and-plugs trial",
+      "sources": [
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "gh-pages",
+          "path": ""
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "highlighting-trial",
+          "path": ""
+        }
+      ]
+    },
+    {
+      "folder": "guides/09-durable-agent-worker-under-launchd",
+      "id": "durable-agent-worker-under-launchd",
+      "title": "RubyLLM durable agents + Terminal: a job worker under launchd",
+      "summary": "A durable RubyLLM agent's job worker supervised by launchd on an office Mac, with cancellation and at-least-once pitfalls.",
+      "combines": [
+        "rubyllm",
+        "terminal"
+      ],
+      "scenario": "Fløibanen closure desk in Bergen",
+      "sources": [
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/30-durable-agents-and-rails/01-kyoto-torii-watch"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/30-durable-agents-and-rails/03-cusco-terrace-checkpoint"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/30-durable-agents-and-rails/04-zanzibar-dhow-permit"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/30-durable-agents-and-rails/05-bergen-floyen-closure"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/30-durable-agents-and-rails/07-luang-prabang-boat-receipt"
+        },
+        {
+          "multivitamin": "rubyllm",
+          "repo": "MICharisma/rubyllm-multivitamin",
+          "ref": "main",
+          "path": "features/30-durable-agents-and-rails/12-rapa-nui-quarry-stop"
+        },
+        {
+          "multivitamin": "terminal",
+          "repo": "MICharisma/terminal-multivitamin",
+          "ref": "main",
+          "path": ""
+        }
+      ]
+    },
+    {
+      "folder": "guides/10-swiftdata-mirrors-phoenix-json",
+      "id": "swiftdata-mirrors-phoenix-json",
+      "title": "SwiftData + Phoenix: a Mac app that mirrors a Phoenix JSON API",
+      "summary": "Upsert Phoenix json/2 records into SwiftData by a unique server id, and decode Phoenix's real wire types.",
+      "combines": [
+        "swiftdata",
+        "phoenix"
+      ],
+      "scenario": "Punta Arenas Antarctic loads, offline at the hangar",
+      "sources": [
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/03-controllers-and-json/13-punta-arenas-austral-load"
+        },
+        {
+          "multivitamin": "phoenix",
+          "repo": "MICharisma/phoenix-multivitamin",
+          "ref": "main",
+          "path": "features/03-controllers-and-json/02-cusco-load-sheet"
+        },
+        {
+          "multivitamin": "swiftdata",
+          "repo": "MICharisma/swiftdata-multivitamin",
+          "ref": "main",
+          "path": "features/02-attributes/01-lucanas-ear-mark"
+        },
+        {
+          "multivitamin": "swiftdata",
+          "repo": "MICharisma/swiftdata-multivitamin",
+          "ref": "main",
+          "path": "features/06-codable-and-enums/09-oaxaca-label-proof"
+        },
+        {
+          "multivitamin": "swiftdata",
+          "repo": "MICharisma/swiftdata-multivitamin",
+          "ref": "main",
+          "path": "features/06-codable-and-enums/05-minas-clay-still"
+        }
+      ]
+    }
+  ]
+}

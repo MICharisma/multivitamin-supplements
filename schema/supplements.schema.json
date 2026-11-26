@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MICharisma/multivitamin-supplements/schema/supplements.schema.json",
+  "title": "Multivitamin Supplements index",
+  "type": "object",
+  "required": ["version", "name", "title", "libraries", "supplements"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 1 },
+    "name": { "const": "supplements" },
+    "title": { "type": "string" },
+    "repo": { "type": "string", "pattern": "^MICharisma/[\\w.-]+$" },
+    "libraries": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["title", "repo"],
+        "properties": {
+          "title": { "type": "string" },
+          "repo": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "supplements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["folder", "id", "title", "summary", "combines", "scenario", "sources"],
+        "additionalProperties": false,
+        "properties": {
+          "folder": { "type": "string", "pattern": "^guides/\\d{2}-[a-z0-9-]+$" },
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "combines": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+          "scenario": { "type": "string" },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["multivitamin", "repo", "ref", "path"],
+              "additionalProperties": false,
+              "properties": {
+                "multivitamin": { "type": "string" },
+                "repo": { "type": "string" },
+                "ref": { "type": "string" },
+                "path": { "type": "string", "description": "Repo-relative path; empty string means the repo root" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
